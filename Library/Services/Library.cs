@@ -34,13 +34,13 @@ namespace Library.Services
         public List<Book> FindBooksByAuthor(string authorName)
         {
             return _books.Select(x => x)
-                .Where(x => x.Author.Contains(authorName)).ToList();
+                .Where(x => x.Author.Contains(authorName, StringComparison.OrdinalIgnoreCase)).ToList();
         }
 
         public List<Book> FindBooksByTitle(string bookTitle)
         {
             return _books.Select(x => x)
-                .Where(x => x.Title.Contains(bookTitle)).ToList();
+                .Where(x => x.Title.Contains(bookTitle, StringComparison.OrdinalIgnoreCase)).ToList();
         }
 
         public List<Book> GetAllBooks()

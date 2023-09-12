@@ -97,6 +97,7 @@ namespace Library
                         continue;
 
                     case "3":
+                        Console.WriteLine("Enter full author name or any fragment from it:");
                         string? authorToFind = Console.ReadLine();
 
                         if (IsStringNullOrEmpty(authorToFind))
@@ -112,6 +113,7 @@ namespace Library
                         continue;
 
                     case "4":
+                        Console.WriteLine("Enter full book title or any fragment from it:");
                         string? titleToFind = Console.ReadLine();
 
                         if (IsStringNullOrEmpty(titleToFind))
